@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dawat For College Rukhsati 🎉</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #d63384;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #ff4081;
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 15px 0;
+    }
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      padding: 40px;
+      max-width: 650px;
+      margin: auto;
+    }
+    .highlight {
+      color: #d63384;
+      font-weight: bold;
+    }
+    .footer {
+      margin-top: 30px;
+      font-style: italic;
+      color: #555;
+    }
+    .heart {
+      color: #ff4d6d;
+      font-size: 1.5em;
+    }
+    .countdown {
+      margin: 25px 0;
+      font-size: 1.5em;
+      color: #d63384;
+      font-weight: bold;
+    }
+    .music {
+      margin-top: 20px;
+    }
+    button {
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #d63384;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>💖 Dawat For College Rukhsati 💖</h1>
+    <h2>Best Friend Treat Alert!</h2>
+
+    <p>Hey Bestie! 🎀</p>
+    <p>
+      Exams are finally over (uff... thank God 😅), and it’s time to relax, laugh, and celebrate <br>
+      all our sleepless nights and hard work!
+    </p>
+
+    <p>
+      So, I’m giving you a special <span class="highlight">Treat Dawat</span> from my side! 🍕🍰✨
+    </p>
+
+    <p>
+      <b>Date:</b> 11th Nov 2025 <br>
+      <b>Time:</b> 4:00 PM onwards <br>
+      <b>Venue:</b> Surprise yara Surprise (Sabrukaaa)
+    </p>
+
+    <div class="countdown">
+      ⏰ Countdown to our Treat Day: <br>
+      <span id="timer"></span>
+    </div>
+
+    <p>
+      Get ready for yummy Khana, Zada gossips, and lots of Hassi. 💫<br>
+      Because no one deserves it more than <span class="highlight">us!</span> 🩷
+    </p>
+
+    <p>
+      Can’t wait to make more crazy memories together! Don’t be late… I’ll be waiting with your favorite dessert 😋
+    </p>
+
+    <div class="music">
+      <p>🎶 Tap below to hear my voice 🎶</p>
+      <audio id="myVoice" controls>
+        <source src="https://voca.ro/1ncNhEyHYhD7" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+      <br><br>
+      <button onclick="document.getElementById('myVoice').play()">🎧 Tap to Play Voice 🎧</button>
+    </div>
+
+    <div class="footer">
+      With love, <br>
+      <span class="highlight">Your Bestie 💕</span>
+      <div class="heart">❤️❤️❤️</div>
+    </div>
+  </div>
+
+  <script>
+    // Countdown Timer Script
+    const countDownDate = new Date("Jan 11, 2025 17:00:00").getTime();
+    const timer = document.getElementById("timer");
+
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(x);
+        timer.innerHTML = "🎉 It's Treat Time! 🎉";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
